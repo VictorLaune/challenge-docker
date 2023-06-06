@@ -2,11 +2,11 @@ FROM golang:latest
 
 WORKDIR /usr/src/app
 
-COPY go.mod go.sum ./
+COPY go.* .
 
 RUN go mod download 
 
-COPY *.go ./
+COPY . .
 
 EXPOSE 8080
 
